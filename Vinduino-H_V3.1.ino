@@ -1,6 +1,6 @@
 // "Vinduino-H" portable soil moisture sensor code V3.10
 // Date November 16, 2014
-// Reinier van der Lee and Theodore Kaskalis
+// Copyright (C), 2015, Reinier van der Lee and Theodore Kaskalis
 // www.vanderleevineyard.com
 //
 // This program is free software: you can redistribute it and/or modify
