@@ -4,7 +4,8 @@
 // Using latest DHT libaray, allowing use of DHT11 or DHT 22
 // Added galvanic voltage bias compensation
 // Date May 24, 2015
-// Reinier van der Lee, www.vanderleevineyard.com
+// Copyright (C), 2015, Reinier van der Lee, 
+// www.vanderleevineyard.com
 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
