@@ -3,7 +3,7 @@ The Vinduino project started from the necessity to manage irrigation in my small
 Soil moisture monitoring systems have been around for decades, but they cost hundreds to thousands of dollars and -because these systems are proprietary- there will be ongoing cost to customize and maintain these systems. As a small vineyard owner, I needed something low cost and flexible.
 The open source Arduino platform, together with low cost gypsum soil moisture sensors, provides all that. While I first envisioned the Vinduino project (Vineyard + Arduino) for my personal interest and needs, but now the scope has broadened to providing easy to use, open source, low cost solutions for agricultural irrigation management.
 
-Saving water is more important now than ever. The drought that is ongoing  in California for four years, made everybody realize the importance of reducing water use. But it it not just California that is plagued by prolonged drought periods. Large agricultural areas in South America, India, China, and Africa suffer from continuing water shortage as well.
+Saving water is more important now than ever. The drought that is ongoing  in California for four years, made everybody realize the importance of reducing water use. But it is not just California that is plagued by prolonged drought periods. Large agricultural areas in South America, India, China, and Africa suffer from continuing water shortage as well.
 
 To date, the Vinduino project provided the following results, published on the Vinduino blog and github:
 
