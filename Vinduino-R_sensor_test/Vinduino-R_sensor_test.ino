@@ -151,7 +151,7 @@ void measure (int sensor, int phase_b, int phase_a, int analog_input)
     // Calculate resistance
     // the 0.5 add-term is used to round to the nearest integer
     // Tip: no need to transform 0-1023 voltage value to 0-5 range, due to following fraction
-    long resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage)-457 ;
+    long resistance = (knownResistor * (supplyVoltage - sensorVoltage ) / sensorVoltage) ;
     
     delay(1); 
     addReading(resistance);
