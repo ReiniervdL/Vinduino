@@ -1,0 +1,28 @@
+[Eagle]
+Version="07 05 00"
+Platform="Mac OS X"
+Serial="62191E841E-LSR-WLM-1EL"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/74xx-us.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/SparkFun-AnalogIC.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/SparkFun-Connectors.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/SparkFun-DigitalIC.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/SparkFun-PowerIC.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/SparkFun-Resistors.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/adafruit.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/con-molex.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/holes.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/nxp.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/texas.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/seeed/Seeed-OPL-Resistor.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/seeed/Seeed-OPL-Connector.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/seeed/Seeed-OPL-Crystal-Oscillator.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/seeed/Seeed-OPL-Capacitor.lbr"
+UsedLibrary="/Applications/EAGLE-7.5.0/lbr/seeed/Seeed-OPL-Diode.lbr"
+
+[Desktop]
+Screen="3360 1080"
