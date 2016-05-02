@@ -40,7 +40,7 @@ byte ohm[8] = {
   B00000
 };
 
-const long knownResistor = 4665;  // Constant value of known resistor in Ohms
+const long knownResistor = 4700;  // Constant value of known resistor in Ohms
 
 int activeDigitalPin = 6;         // 6 or 7 interchangeably
 int supplyVoltageAnalogPin;       // 6-ON: A0, 7-ON: A1
@@ -130,8 +130,8 @@ void loop() {
  lcd.setCursor(0,0);
   // lcd.print("Sensor: " );
  lcd.print(valueOf[NUM_READS/2].resistance);
- lcd.print(" ");
- lcd.write(1);
+ lcd.print(" Ohm");
+ //lcd.write(1);
 
   // delay until next measurement (msec)
   delay(3000);   
