@@ -20,6 +20,6 @@ To date, the Vinduino project provided the following results, published on the V
 	Built in real time clock for precise irrigation timing
 * Gateway to connect multiple LoRa end nodes to the Internet via Wifi (Vinduino Gateway)
 
-All publicly released rogramming and documentation is available for free under the GNU General Public License 3.0.
+All publicly released programming and documentation is available for free under the GNU General Public License 3.0.
 
 Web site: www.vanderleevineyard.com
