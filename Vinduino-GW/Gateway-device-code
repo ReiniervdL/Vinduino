@@ -1,0 +1,51 @@
+// Create a message buffer
+local msg = ""
+local response_msg = ""
+local waiting_for_response = false
+local req_string
+
+// A function that is called everytime that the UART receives a byte
+function serialRx() {
+  local i = 0
+  local c = 0
+  
+  //Pull a byte from the UART FIFO
+  local uart_blob = uart.readblob()
+  
+  for (i=0;i<uart_blob.len();i++)
+  {
+    c = uart_blob[i]
+    if (c < 0x7F) {
+        msg=msg+format("%c",c);
+        
+        if (waiting_for_response == true) {
+            response_msg = response_msg+format("%c",c);
+        }
+        if (c=='!') {
+            server.log(msg)
+            agent.send("log_data",msg)
+            if (msg[0]=='$') {
+                //agent.send("log_data",msg)
+            }
+            msg = ""
+            if (waiting_for_response == true) {
+                agent.send("log_data",response_msg)
+                waiting_for_response = false
+            }
+        }
+    }
+  }
+}
+
+function request(addr) {
+    waiting_for_response = true
+    response_msg = ""
+    req_string = "$,"+addr+"!\n"
+    uart.write(req_string)
+    server.log("Req: "+req_string)
+}
+
+uart <- hardware.uart57
+// Setup hardware UART with serialRx event to receive bytes
+uart.configure(9600, 8, PARITY_NONE, 1, NO_CTSRTS, serialRx);
+agent.on("uart.request",request)
