@@ -10,7 +10,7 @@ To date, the Vinduino project provided the following results, published on the V
 
 * DIY calibrated gypsum soil moisture sensors (Watermark SS200 is also supported)
 * Hand held sensor reader (soil moisture, soil/water salinity, water pressure)
-* Solar powered remote sensor platform (Vinduino R3)
+* Solar powered remote sensor platform (Vinduino R3), available on Tindie.com
 	Options include:
 	4 electrically separated inputs for soil moisture sensors
 	Wifi (ESP8266) or Globalsat LM-210 LoRa module for long range (6 miles)
