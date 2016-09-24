@@ -1,0 +1,25 @@
+function log_data(string){
+    local values = split(string,",")
+    if (values.len() >= 7) {
+        local dataString = "&field1="+values[2]+"&field2="+values[3]+"&field3="
+        +values[4]+"&field4="+values[5]+"&field5="+values[6]+"&field6="+values[7]
+        +"&field7="+values[8]+"&field8="+values[9]
+        
+        // Construct the base URL: http://api.thingspeak.com/update:
+        local thingSpeakUrl = "http://api.thingspeak.com/update";
+        // Construct the headers: 
+        local headers = {
+  "Content-Type" : "application/x-www-form-urlencoded",
+  "X-THINGSPEAKAPIKEY" : values[1]
+};
+        // Send the POST to Thingspeak URL, with Headers, and dataString data.
+        local request = http.post(thingSpeakUrl, headers, dataString);
+    
+        // Get the response from the server, and send it out the debug window:
+         local response = request.sendsync();
+        server.log("ThingSpeak response: " + response.body);
+  //return response;
+}
+}
+
+device.on("log_data",log_data);
