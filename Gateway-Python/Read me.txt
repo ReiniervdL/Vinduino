@@ -1,0 +1,28 @@
+The Vinduino gateway example code for the Globalsat LD20H USB dongle is written in Python3.
+
+Python modules needed for the Vinduino gateway script:
+- serial
+- time
+- thingspeak
+- sqlite3
+
+DB browser for SQLite (http://sqlitebrowser.org) is a great program to manage the SQLite database.
+
+
+For Windows, install the Cypress USB serial driver
+
+For Linux: 
+Linux does not require a special drivers for the USB serial interface, however ensure that you have qt4, gcc, and libusb installed.  The USB driver stack in Linux has a built-in driver for CDC-ACM class devices. The Cypress chip inside the LD-20 supports CDC-ACM class, CDC-ACM driver gets automatically bound to the device and creates a device node in /dev/ttyACM*(* -The name of device node will vary based on the number of devices connected).
+
+Here is a good description for testing the USB serial connection in Linux:
+http://www.cypress.com/knowledge-base-article/testing-usb-serial-bridge-controller-configured-usb-uart-linux-kba92551
+
+I found that Ubuntu and RPI recognized the USB serial port, but likely assumed it was an AT-command modem. 
+
+A solution that worked for me is to bypass the ModemManager: 
+
+sudo systemctl mask ModemManager.service
+
+
+
+
