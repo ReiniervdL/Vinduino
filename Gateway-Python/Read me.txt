@@ -3,10 +3,11 @@ The Vinduino gateway example code for the Globalsat LD20H USB dongle is written 
 Python modules needed for the Vinduino gateway script:
 - serial
 - time
-- thingspeak
+- thingspeak (linux install: $ sudo pip3 install thingspeak)
 - sqlite3
 
 DB browser for SQLite (http://sqlitebrowser.org) is a great program to manage the SQLite database.
+Linux install: $ sudo apt-get install sqlitebrowser
 
 
 For Windows, install the Cypress USB serial driver
