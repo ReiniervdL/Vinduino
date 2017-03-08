@@ -10,7 +10,7 @@ channel_id = ()
 write_key  = ()
 
 #ser = serial.Serial('/dev/ttyACM0', 9600, timeout=900)
-ser = serial.Serial('/dev/cu.usbmodem1421', 9600, timeout=900)
+ser = serial.Serial('/dev/cu.usbmodem1411', 9600, timeout=900)
 
 while True:
     line=ser.readline()
