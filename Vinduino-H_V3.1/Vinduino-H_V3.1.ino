@@ -97,6 +97,9 @@ void loop() {
     // Tip: no need to transform 0-1023 voltage value to 0-5 range, due to following fraction
     valueOf[i].resistance = long( float(knownResistor) * ( supplyVoltage - sensorVoltage ) / sensorVoltage + 0.5 );
     valueOf[i].moisture = min( int( pow( valueOf[i].resistance/31.65 , 1.0/-1.695 ) * 400 + 0.5 ) , 100 );
+//	  valueOf[i].tension = round( -20 * (double(valueOf[i].resistance)/1000) * ( 1 - 0.55)); // Watermark 0 < 1 kOhm
+    valueOf[i].tension = round( ( -3.213 * (double(valueOf[i].resistance)/1000) - 4.093) / ( 1 - 0.009733 * (double(valueOf[i].resistance)/1000) - 0.01205*24)); // Watermark 1 < 8 kOhm
+//    valueOf[i].tension = round(-2.246 - (5.239 * (double(valueOf[i].resistance)/1000)) - 0.06756 * pow(valueOf[i].resistance/1000,2)); // Watermark > 8 kOhm
 //  valueOf[i].moisture = min( int( pow( valueOf[i].resistance/331.55 , 1.0/-1.695 ) * 100 + 0.5 ) , 100 );
 
   }
@@ -123,8 +126,10 @@ void loop() {
   // set the cursor to column 0, line 1
   lcd.setCursor(0, 1);
   //lcd.print("Moisture: ");
-  lcd.print(valueOf[NUM_READS/2].moisture);
-  lcd.print(" %");
+  //lcd.print(valueOf[NUM_READS/2].moisture);
+  //lcd.print(" %");
+  lcd.print(valueOf[NUM_READS/2].tension);
+  lcd.print(" kPa");
 
   // set the cursor to column 0, line 1
  lcd.setCursor(0,0);
