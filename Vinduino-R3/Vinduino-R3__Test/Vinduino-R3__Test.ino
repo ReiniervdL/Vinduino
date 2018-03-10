@@ -31,7 +31,7 @@ const long knownResistor = 4750;  // Value of R9 and R10 in Ohms, = reference fo
 
 unsigned long supplyVoltage;      // Measured supply voltage
 unsigned long sensorVoltage;      // Measured sensor voltage
-int zeroCalibration = 115;        // calibrate sensor resistace to zero when input is short circuited
+int zeroCalibration = 95;        // calibrate sensor resistace to zero when input is short circuited
                                   // basically this is compensating for the mux switch resistance
 
 values valueOf[NUM_READS];        // Calculated  resistances to be averaged
