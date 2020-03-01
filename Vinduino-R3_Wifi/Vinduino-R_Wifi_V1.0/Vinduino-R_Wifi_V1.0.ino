@@ -26,7 +26,7 @@
 #define SSID "insert wifi network name here"
 #define PASS "insert your network password here"
 #define IP "184.106.153.149" // thingspeak.com
-String GET = "GET /update?key="insert your Thingspeak key here" &1=";
+String GET = "GET /update?key="VSBQNUSZ0RCICFRK" &1=";
 
 //set up temp sensor
 dht DHT;
