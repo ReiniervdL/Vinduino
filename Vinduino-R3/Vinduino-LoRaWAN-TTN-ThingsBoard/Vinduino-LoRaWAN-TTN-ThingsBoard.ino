@@ -426,9 +426,10 @@ void loraconfig()
 
 
   // set AppEui & AppKey
-  Serial.println("AAT2 AppEui=70B3D57ED002E2EE"); delay (50); // get the AppEUI from The Things Network console
+  Serial.println("AAT2 DevEui=xxxxxxxxxxxxxx"); delay (50); // get the DevEUI from The Things Network console
+  Serial.println("AAT2 AppEui=xxxxxxxxxxxxxx"); delay (50); // get the AppEUI from The Things Network console
 
-  Serial.println("AAT2 AppKey=7C3AF9DC87E6A361A17BD1F555CF8CEC"); delay (50); // get the Appkey from The Things Network console
+  Serial.println("AAT2 AppKey=xxxxxxxxxxxxxx"); delay (50); // get the Appkey from The Things Network console
 
   
   Serial.println("AAT1 Save"); delay (5000);
