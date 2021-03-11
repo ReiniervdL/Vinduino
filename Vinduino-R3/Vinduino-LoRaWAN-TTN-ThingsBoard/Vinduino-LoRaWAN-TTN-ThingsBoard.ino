@@ -219,7 +219,7 @@ void soilsensors(){
   temp = DHT.temperature;
   humidity = DHT.humidity;
   temp = temp +100 ; //use this line when sensor installed
-  //temp = 100; //use this line when sensor NOT installed
+  //temp = 100; humidity = 0; //use this line when sensor NOT installed
 
   TxData();
 }
@@ -469,6 +469,7 @@ void SerialParse () {
     if(inputString.indexOf("Tx_no_free_ch") >= 0) {Serial.println("Tx_no_free_ch action"); signal_Led(4);};
     if(inputString.indexOf("Tx_not_joined") >= 0) {Serial.println("Tx_not_joined action"); signal_Led(5);};
     if(inputString.indexOf("Tx_noACK") >= 0) {Serial.println("Tx_noACK action"); signal_Led(6);};
+    if(inputString.indexOf("invalid_param") >= 0) {Serial.println("invalid_param action"); signal_Led(7);};
     
     //INPUT DATA WAS PARSED, SO WE GET BACK TO INITIAL STATE.
     inputString = "";
